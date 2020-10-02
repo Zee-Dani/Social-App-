@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-#from .utils import get_random_code
+from .utils import get_random_code
 from django.template.defaultfilters import slugify
 
 
@@ -22,7 +22,7 @@ class Profile(models.Model):
     def __str__(self):
         return f"{self.user.username}--{self.created}"
     
-     def save(self,*args, **kwargs):
+    def save(self,*args, **kwargs):
         ex = False
         if self.first_name and self.last_name:
             to_slug = slugify(str(self.first_name)+ " " + str(self.last_name))
