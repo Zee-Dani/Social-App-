@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'posts'
 ]
 
-NOTIFY_EMAIL = env('NOTIFY_EMAIL')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
